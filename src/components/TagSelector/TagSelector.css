@@ -1,0 +1,54 @@
+.tag-selector {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	top: 10px;
+	left: 20px;
+}
+
+.tag-title {
+	font-size: 30px;
+	top: 10px;
+	position: relative;
+}
+
+.selected-tags {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	top: 10px;
+}
+
+.single-selected-tag {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	height: 33px;
+	width: 146px;
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #00A0DE;
+	font-size: 22px;
+	margin-left: 20px;
+}
+
+.tag-text {
+	margin-left: 10px;
+	margin-top: 2px;
+}
+
+.tag-cross-svg {
+	height: 11px;
+	width: 11px;
+	margin-top: 10px;
+	position: absolute;
+	right: 13px;
+	fill: #D3D3D3;
+	cursor: pointer;
+}
+
+.tag-cross-svg:hover {
+	fill: gray;
+}
+
