@@ -8,7 +8,8 @@ const data = [
 		country: 'United States',
 		product: 'BCF',
 		errors: 0,
-		warnings: 0
+		warnings: 0,
+		tags: ['tag1']
 	},
 	{
 		name: 'San Francisco',
@@ -19,7 +20,8 @@ const data = [
 		country: 'United States',
 		product: 'BCF',
 		errors: 0,
-		warnings: 0
+		warnings: 0,
+		tags: ['tag1']
 	},
 	{
 		name: 'New York',
@@ -30,7 +32,8 @@ const data = [
 		country: 'United States',
 		product: 'BCF',
 		errors: 1,
-		warnings: 0
+		warnings: 0,
+		tags: ['tag2']
 	},
 	{
 		name: 'Portland',
@@ -41,7 +44,8 @@ const data = [
 		country: 'United States',
 		product: 'BMF',
 		errors: 0,
-		warnings: 2
+		warnings: 2,
+		tags: ['tag2']
 	},
 	{
 		name: 'San Paulo',
@@ -52,7 +56,8 @@ const data = [
 		country: 'Brazil',
 		product: 'BMF',
 		errors: 2,
-		warnings: 3
+		warnings: 3,
+		tags: ['tag3']
 	},
 	{
 		name: 'Hong Kong',
@@ -63,7 +68,8 @@ const data = [
 		country: 'Hong Kong',
 		product: 'BCF',
 		errors: 2,
-		warnings: 0
+		warnings: 0,
+		tags: ['tag3']
 	},
 	{
 		name: 'Hong Kong2',
@@ -74,7 +80,8 @@ const data = [
 		country: 'China',
 		product: 'BCF',
 		errors: 0,
-		warnings: 3
+		warnings: 3,
+		tags: ['tag1']
 	},
 	{
 		name: 'Sydney',
@@ -85,7 +92,8 @@ const data = [
 		country: 'Australia',
 		product: 'BMF',
 		errors: 0,
-		warnings: 0
+		warnings: 0,
+		tags: ['tag1']
 	},
 	{
 		name: 'London',
@@ -96,7 +104,8 @@ const data = [
 		country: 'United Kingdom',
 		product: 'BCF',
 		errors: 0,
-		warnings: 2
+		warnings: 2,
+		tags: ['tag2']
 	},
 ];
 

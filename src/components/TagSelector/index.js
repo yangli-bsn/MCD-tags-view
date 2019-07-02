@@ -1,6 +1,10 @@
 import React from 'react';
 import Autocomplete from 'react-autocomplete';
 
+import store from 'store';
+import { connect } from 'react-redux';
+import { addTag, removeTag } from 'tags/actions';
+
 import TagsData from 'data/Tags';
 
 import { ReactComponent as CrossIcon } from 'assets/cross.svg';
@@ -12,8 +16,7 @@ class TagSelector extends React.Component {
   	super(props);
 
   	this.state = {
-  		value: '',
-      selectedTags: []
+  		value: ''
   	};
 
   	this.onChange = this.onChange.bind(this);
@@ -23,10 +26,7 @@ class TagSelector extends React.Component {
   }
 
   deleteTag(tag) {
-    let { selectedTags } = this.state;
-    let index = selectedTags.findIndex((t) => {return t === tag});
-    selectedTags.splice(index, 1);
-    this.setState({ selectedTags: selectedTags });
+    store.dispatch(removeTag(tag));
   }
 
   onChange(e) {
@@ -34,11 +34,7 @@ class TagSelector extends React.Component {
   }
 
   onSelect(val) {
-    let { selectedTags } = this.state;
-    if (!selectedTags.includes(val)) {
-      selectedTags.push(val);
-      this.setState({selectedTags: selectedTags});
-    }
+    store.dispatch(addTag(val));
   }
 
   shouldItemRender(item, value) {
@@ -46,8 +42,7 @@ class TagSelector extends React.Component {
   }
 
   render() {
-    let { selectedTags } = this.state;
-    console.log(this.state.selectedTags);
+    let { selectedTags } = store.getState();
 
   	const inputStyle = {
   		width: 266,
@@ -104,4 +99,10 @@ class TagSelector extends React.Component {
   }
 }
 
-export default TagSelector;
+const mapStateToProps = state => {
+  return {
+    selectedTags: state.selectedTags
+  }
+};
+
+export default connect(mapStateToProps)(TagSelector);
