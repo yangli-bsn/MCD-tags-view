@@ -1,0 +1,9 @@
+.controller-type-piechart {
+  position: relative;
+  margin: 0 5px;
+}
+
+.controller-type-piechart-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
