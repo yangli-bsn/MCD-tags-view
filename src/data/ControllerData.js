@@ -9,7 +9,7 @@ const data = [
 		product: 'BCF',
 		errors: 0,
 		warnings: 0,
-		tags: ['tag1']
+		tags: ['US-West-1']
 	},
 	{
 		name: 'San Francisco',
@@ -21,7 +21,7 @@ const data = [
 		product: 'BCF',
 		errors: 0,
 		warnings: 0,
-		tags: ['tag1']
+		tags: ['US-West-1']
 	},
 	{
 		name: 'New York',
@@ -33,7 +33,7 @@ const data = [
 		product: 'BCF',
 		errors: 1,
 		warnings: 0,
-		tags: ['tag2']
+		tags: ['US-West-2']
 	},
 	{
 		name: 'Portland',
@@ -45,7 +45,7 @@ const data = [
 		product: 'BMF',
 		errors: 0,
 		warnings: 2,
-		tags: ['tag2']
+		tags: ['US-West-2']
 	},
 	{
 		name: 'San Paulo',
@@ -57,7 +57,7 @@ const data = [
 		product: 'BMF',
 		errors: 2,
 		warnings: 3,
-		tags: ['tag3']
+		tags: ['US-East-1']
 	},
 	{
 		name: 'Hong Kong',
@@ -69,7 +69,7 @@ const data = [
 		product: 'BCF',
 		errors: 2,
 		warnings: 0,
-		tags: ['tag3']
+		tags: ['US-East-1']
 	},
 	{
 		name: 'Hong Kong2',
@@ -81,7 +81,7 @@ const data = [
 		product: 'BCF',
 		errors: 0,
 		warnings: 3,
-		tags: ['tag1']
+		tags: ['US-West-1']
 	},
 	{
 		name: 'Sydney',
@@ -93,7 +93,7 @@ const data = [
 		product: 'BMF',
 		errors: 0,
 		warnings: 0,
-		tags: ['tag1']
+		tags: ['US-West-1']
 	},
 	{
 		name: 'London',
@@ -105,7 +105,7 @@ const data = [
 		product: 'BCF',
 		errors: 0,
 		warnings: 2,
-		tags: ['tag2']
+		tags: ['US-West-2']
 	},
 ];
 

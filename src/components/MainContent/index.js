@@ -52,12 +52,12 @@ class MainContent extends Component {
         selectedTagsProps[tag] = {
           tagName: tag,
           position: {
-            x: 0, 
-            y: 0
+            x: 10, 
+            y: 10
           },
           size: {
             width: 600, 
-            height: 400
+            height: 350
           }
         };
       }
@@ -100,7 +100,6 @@ class MainContent extends Component {
   render() {
     let { selectedTags } = store.getState();
     let { selectedTagsProps } = this.state;
-    console.log(selectedTagsProps);
     return (
       <div className="main-content">
         {

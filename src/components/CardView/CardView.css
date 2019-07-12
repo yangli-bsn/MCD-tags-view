@@ -29,6 +29,11 @@
   width: auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  margin: 15px -5px 0 5px;
+  justify-content: space-between;
+  margin: 15px -5px 0 10px;
+}
+
+.card-item {
+  position: relative;
+  margin: 0 5px;
 }

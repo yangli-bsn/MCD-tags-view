@@ -8,6 +8,7 @@
     "react-autocomplete": "^1.8.1",
     "react-dnd": "^8.0.3",
     "react-dom": "^16.8.6",
+    "react-modal": "^3.8.2",
     "react-redux": "^7.1.0",
     "react-rnd": "^9.2.0",
     "react-scripts": "3.0.1",

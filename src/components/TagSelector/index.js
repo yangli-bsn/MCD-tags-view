@@ -47,14 +47,14 @@ class TagSelector extends React.Component {
   	const inputStyle = {
   		width: 266,
   		height: 50,
-  		fontSize: 28
+  		fontSize: 22
   	};
 
   	const itemStyle = {
       paddingLeft: 10,
       paddingTop: 10,
   		height: 40,
-  		fontSize: 26,
+  		fontSize: 22,
       cursor: 'pointer'
   	};
 

@@ -1,0 +1,57 @@
+.dashboard-settings {
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.settings-svg {
+  fill: #00A0DE;
+}
+
+.settings-svg:hover {
+  fill: #00bbff;
+}
+
+.settings-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: opacity 200ms ease-in-out;
+}
+
+.settings-modal-overlay-after-open {
+  opacity: 1;
+}
+
+.settings-modal-overlay-before-close {
+  opacity: 0;
+}
+
+.settings-modal {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+  position: absolute;
+  top: 5vh;
+  left: 5vw;
+  right: 5vw;
+  bottom: 5vh;
+  border: 1px solid #ccc;
+  background: #fff;
+  overflow: auto;
+  webkit-overflow-scrolling: touch;
+  border-radius: 10px;
+  outline: none;
+  padding: 20px;
+}
+
+.settings-after-open {
+  opacity: 1;
+}
+
+.settings-before-close {
+  opacity: 0;
+}

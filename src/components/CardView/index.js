@@ -4,6 +4,7 @@ import { Rnd } from 'react-rnd';
 import ErrorIndicator from 'components/CardVisuals/ErrorIndicator';
 import ErrorsAndWarnings from 'components/CardVisuals/ErrorsAndWarnings';
 import ControllerTypePiechart from 'components/CardVisuals/ControllerTypePiechart';
+import ControllerMostErrors from 'components/CardVisuals/ControllerMostErrors';
 
 import './CardView.css';
 
@@ -12,7 +13,7 @@ class CardView extends Component {
   render() {
     let { defaultOptions, tag, position, size } = this.props;
 
-    const fontSize = Math.max(size.height * 0.1, 25) + 'px';
+    const fontSize = Math.max(size.height * 0.07, 25) + 'px';
     return (
       <div className='card-view'>
   		  <Rnd
@@ -33,9 +34,18 @@ class CardView extends Component {
             <div className='title-separator' />
           </div>
           <div className='card-content'>
-            <ControllerTypePiechart size={size} data={this.props.data} />
-            <ErrorsAndWarnings data={this.props.data} />
-            <ErrorIndicator data={this.props.data} />
+            <div className='card-item'>
+              <ControllerTypePiechart size={size} data={this.props.data} />
+            </div>
+            <div className='card-item'>
+              <ErrorsAndWarnings size={size} data={this.props.data} />
+            </div>
+            <div className='card-item'>
+              <ControllerMostErrors size={size} data={this.props.data} />
+            </div>
+            <div className='card-item'>
+              <ErrorIndicator size={size} data={this.props.data} />
+            </div>
           </div>
         </Rnd>
 		  </div>

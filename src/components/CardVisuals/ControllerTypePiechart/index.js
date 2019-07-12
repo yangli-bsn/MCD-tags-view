@@ -49,7 +49,8 @@ class ControllerTypePiechart extends Component {
           width={piechartSize}
           height={piechartSize}
           colorType='literal'
-          showLabels={true} />
+          showLabels={true}
+          className='controller-type-piechart-itself' />
       </div>
     );
   }

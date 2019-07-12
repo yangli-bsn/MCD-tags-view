@@ -1,0 +1,25 @@
+.errors-and-warnings {
+  position: relative;
+  margin: 0 5px;
+}
+
+.warnings-count {
+  margin-top: 10px;
+}
+
+.errors-warnings-box-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.errors-count-box {
+  background-color: #F41919;
+  text-align: center;
+  color: white;
+}
+
+.warnings-count-box {
+  margin-left: 20px;
+  background-color: #EEDF18;
+  text-align: center
+}
