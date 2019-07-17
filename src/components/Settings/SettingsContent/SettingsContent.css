@@ -1,0 +1,93 @@
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.modal-tag-selector {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.modal-tag-selector-title {
+  line-height: 48px;
+  font-size: 22px;
+}
+
+.modal-tag-selector-dropdown {
+  width: 200px;
+  margin-left: 15px;
+  border-color: #D3D3D3;
+}
+
+.modal-tag-selector-dropdown-placeholder {
+  line-height: 30px;
+}
+
+.modal-tag-selector-dropdown-menu {
+
+}
+
+.modal-tag-selector-menu-item:hover {
+  background-color: lightgray;
+}
+
+.modal-tag-selector-dropdown-arrow {
+  top: 20px;
+}
+
+.modal-panel-configurator {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex: 1 1 auto;
+}
+
+.modal-panel-configuration-info-list {
+  margin-top: 25px;
+  margin-left: 15px;
+  width: 25%;
+  min-width: 200px;
+}
+
+.modal-panel-configuration-separator {
+  width: 1px;
+  background-color: #CCCCCC;
+  height: 100%;
+}
+
+.modal-panel-configurator-info-visual {
+  flex: 1 1 auto;
+}
+
+.modal-panel-visual-item {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+
+.modal-panel-visual-select {
+  margin-bottom: 15px;
+  margin-right: 10px;
+  height: 20px;
+  width: 20px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #D1D1D1;
+}
+
+.modal-panel-visual-select.selected {
+  background-color: #00A0DE;
+}
+
+.modal-panel-visual-name {
+  color: #C4C4C4;
+}
+
+.modal-panel-visual-name.selected {
+  color: black;
+}

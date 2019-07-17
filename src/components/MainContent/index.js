@@ -9,7 +9,8 @@ import allTags from 'data/Tags';
 
 import CardView from 'components/CardView';
 
-import overlapCheck from 'util/overlapCheck';
+import overlapCheck from 'utils/overlapCheck';
+import controllerByTag from 'utils/convertControllerData';
 
 import './MainContent.css';
 
@@ -20,17 +21,6 @@ class MainContent extends Component {
     this.state = {
       selectedTagsProps: {}
     }
-
-    this.controllerByTag = {};
-    allTags.forEach((tag, index) => {
-      // Initiate ControllerByTag
-      this.controllerByTag[tag] = [];
-      controllerData.forEach((controller, index) => {
-        if (controller.tags.includes(tag)) {
-          this.controllerByTag[tag].push(controller);
-        }
-      });
-    });
 
     this.onResize = this.onResize.bind(this);
     this.onDragStop = this.onDragStop.bind(this);
@@ -98,7 +88,7 @@ class MainContent extends Component {
   }
 
   render() {
-    let { selectedTags } = store.getState();
+    let { selectedTags, tagPanelVisuals } = store.getState();
     let { selectedTagsProps } = this.state;
     return (
       <div className="main-content">
@@ -118,7 +108,8 @@ class MainContent extends Component {
                 size={selectedTagsProps[tag].size}
                 onResize={this.onResize}
                 onDragStop={this.onDragStop}
-                data={this.controllerByTag[tag]} />
+                data={controllerByTag[tag]}
+                tagPanelVisuals={tagPanelVisuals[tag]} />
             );
           })
         }
@@ -129,7 +120,8 @@ class MainContent extends Component {
 
 const mapStateToProps = state => {
   return {
-    selectedTags: state.selectedTags
+    selectedTags: state.selectedTags,
+    tagPanelVisuals: state.tagPanelVisuals
   }
 };
 

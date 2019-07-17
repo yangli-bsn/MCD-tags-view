@@ -1,12 +1,12 @@
-.controller-health-piechart {
+.controller-type-piechart {
 
 }
 
-.controller-health-piechart-title {
+.controller-type-piechart-title {
   text-align: center;
   margin-bottom: 10px;
 }
 
-.controller-health-piechart-itself {
+.controller-type-piechart-itself {
   filter: drop-shadow( 1px 1px 2px rgba(0, 0, 0, .7));
 }

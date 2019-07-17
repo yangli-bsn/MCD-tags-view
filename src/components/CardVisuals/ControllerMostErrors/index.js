@@ -5,7 +5,7 @@ import './ControllerMostErrors.css';
 
 class ControllerMostErrors extends Component {
   render() {
-    let { data, size } = this.props;
+    let { data } = this.props;
     let controllersList = [undefined, undefined, undefined];
 
     data.forEach((controller, index) => {

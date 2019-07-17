@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 
+import SettingsContent from 'components/Settings/SettingsContent';
+
 import { ReactComponent as SettingSVG } from 'assets/settings.svg';
+import { ReactComponent as CrossSVG } from 'assets/cross.svg';
 
 import './Settings.css';
 
@@ -11,7 +14,7 @@ const modalClassName = {
   base: 'settings-modal'
 }
 
-const modalOverlayClassName= {
+const modalOverlayClassName = {
   afterOpen: 'settings-modal-overlay-after-open',
   beforeClose: 'settings-modal-overlay-before-close',
   base: 'settings-modal-overlay'
@@ -21,7 +24,8 @@ class Settings extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      modalOpen: false
+      modalOpen: false,
+      currentTag: ''
     };
 
     Modal.setAppElement('#root');
@@ -39,7 +43,6 @@ class Settings extends Component {
   }
 
   render() {
-
     return (
       <div className='dashboard-settings'>
         <SettingSVG className='settings-svg'
@@ -50,6 +53,13 @@ class Settings extends Component {
           closeTimeoutMS={200}
           isOpen={this.state.modalOpen}
           onRequestClose={this.closeModal} >
+          <div className='modal-top-bar'>
+            Dashboard Configurations
+            <CrossSVG 
+              onClick={this.closeModal}
+              className='modal-top-bar-cross-svg' />
+          </div>
+          <SettingsContent />
         </Modal>
       </div>
     );
