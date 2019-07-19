@@ -43,5 +43,8 @@ export default function strToComponent(visual, data, size) {
         </div>
       );
     }
+    default: {
+      return <div />
+    }
   }
 }

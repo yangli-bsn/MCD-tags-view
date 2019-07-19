@@ -6,8 +6,6 @@ import store from 'store';
 import { connect } from 'react-redux';
 import { assignTagVisuals } from 'tags/actions';
 
-import ControllerTypePiechart from 'components/CardVisuals/ControllerTypePiechart';
-
 import strToComponent from 'utils/strToComponent';
 import controllersByTag from 'utils/convertControllerData';
 
@@ -32,16 +30,22 @@ const getItemStyle = (isDragging, draggableStyle) => ({
   userSelect: 'none',
   padding: grid * 2,
   margin: `0 ${grid}px 0 0`,
-
+  borderRadius: '5px',
+  borderStyle: 'solid',
+  borderColor: '#D1D1D1',
+  borderWidth: '1px',
+  boxShadow: isDragging ? '1px 1px 10px grey' : '',
   // change background colour if dragging
-  background: isDragging ? 'lightgreen' : 'grey',
+  background: 'white',
+  transition: '200ms',
 
   // styles we need to apply on draggables
   ...draggableStyle,
 });
 
 const getListStyle = isDraggingOver => ({
-  background: isDraggingOver ? 'lightblue' : 'lightgrey',
+  transition: '200ms',
+  background: isDraggingOver ? '#D1D1D1' : 'white',
   display: 'flex',
   padding: grid,
   overflow: 'auto',
@@ -98,11 +102,13 @@ class DraggableConfig extends Component {
                         provided.draggableProps.style
                       )}
                     >
+                      <div className='draggable-title' style={{marginBottom: '10px'}}>
+                        { item.content }
+                      </div>
                       { strToComponent(
                           item.content, 
                           controllersByTag[currentTag], 
                           {width: 320, height: 200}) }
-                      { item.content }
                     </div>
                   )}
                 </Draggable>

@@ -9,9 +9,8 @@ class CardView extends Component {
 
   render() {
     let { defaultOptions, tag, position, size, tagPanelVisuals, data } = this.props;
-
-
     const fontSize = Math.max(size.height * 0.07, 25) + 'px';
+
     return (
       <div className='card-view'>
   		  <Rnd
@@ -22,7 +21,7 @@ class CardView extends Component {
           onResize={(e, direction, ref, delta, pos) => {this.props.onResize(e, ref, pos, tag)}}
           onDragStop={(e, data) => {this.props.onDragStop(e, data, tag)}}
           bounds='.main-content'
-          minWidth={500}
+          minWidth={220 * tagPanelVisuals.length}
           minHeight={300}
           maxHeight={window.innerHeight * 0.85}
           maxWidth={window.innerWidth * 0.95}

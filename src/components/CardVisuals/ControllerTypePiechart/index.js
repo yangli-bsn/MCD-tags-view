@@ -48,6 +48,7 @@ class ControllerTypePiechart extends Component {
           data={myData}
           width={piechartSize}
           height={piechartSize}
+          labelsStyle={{fontSize: 13, fill: '#222'}}
           colorType='literal'
           showLabels={true}
           className='controller-type-piechart-itself' />
