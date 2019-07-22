@@ -1,5 +1,6 @@
 .card-view {
-  
+  overflow: visible;
+  position: relative;
 }
 
 .single-card {
@@ -38,3 +39,24 @@
   position: relative;
   margin: 0 5px;
 }
+
+.grid-item {
+  overflow: hidden;
+  position: relative;
+  background-color: white;
+  box-shadow: 1px 1px 5px grey;
+  height: 350px;
+  flex-basis: 48%;
+  -ms-flex: auto;
+  width: 259px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+@media(max-width: 555px) {
+  .grid-item {
+    flex-basis: 100%;
+  }
+}
+

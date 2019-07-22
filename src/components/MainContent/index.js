@@ -52,27 +52,24 @@ class MainContent extends Component {
     let { selectedTags, tagPanelVisuals, tagPanelProps } = store.getState();
     return (
       <div className="main-content">
-        {
-          selectedTags.map((tag, index) => {
-            let defaultOptions = {
-              x: 0,
-              y: 0,
-              width: 320,
-              height: 200,
-            };
-            return (
-              <CardView key={index}
-                defaultOptions={defaultOptions}
-                tag={tag}
-                position={tagPanelProps[tag].position}
-                size={tagPanelProps[tag].size}
-                onResize={this.onResize}
-                onDragStop={this.onDragStop}
-                data={controllerByTag[tag]}
-                tagPanelVisuals={tagPanelVisuals[tag]} />
-            );
-          })
-        }
+        <div className="container">
+          <div className="grid-row">
+          {
+            selectedTags.map((tag, index) => {
+              return (
+                <CardView key={index}
+                  tag={tag}
+                  position={tagPanelProps[tag].position}
+                  size={tagPanelProps[tag].size}
+                  onResize={this.onResize}
+                  onDragStop={this.onDragStop}
+                  data={controllerByTag[tag]}
+                  tagPanelVisuals={tagPanelVisuals[tag]} />
+              );
+            })
+          }
+          </div>
+        </div>
       </div>
     );
   }

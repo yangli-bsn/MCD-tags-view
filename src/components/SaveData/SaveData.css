@@ -1,12 +1,9 @@
 .save-button {
+  position: relative;
   width: 70px;
   height: 35px;
   color: white;
   background-color: #00A0DE;
-  position: absolute;
-  right: 100px;
-  margin-right: 20px;
-  top: 20px;
   cursor: pointer;
   text-align: center;
   line-height: 35px;
@@ -17,4 +14,21 @@
 
 .save-button:hover {
   background-color: #00bbff;
+}
+
+.save-dashboard {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 60px;
+  margin-right: 20px;
+  top: 20px;
+  width: 120px;
+}
+
+.sweet-loading {
+  position: relative;
+  margin-left: 12px;
+  line-height: 45px;
+  transition: 200ms;
 }

@@ -46,7 +46,7 @@ class ControllerHealthPiechart extends Component {
         </div>
         <RadialChart
           data={myData}
-          labelsStyle={{fontSize: 13, fill: '#222'}}
+          labelsStyle={{fontSize: 11, fill: '#222'}}
           width={piechartSize}
           height={piechartSize}
           colorType='literal'

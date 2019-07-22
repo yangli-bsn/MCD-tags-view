@@ -1,11 +1,15 @@
 export default function addTag(state, action) {
   let newTags = [...state.selectedTags];
+
+  // Calculate position
+  // let oldLength = newTags.length;
+
   let newTagPanelVisuals = {...state.tagPanelVisuals};
   let newTagPanelProps = {...state.tagPanelProps};
   if (!newTags.includes(action.payload)) {
     newTags.push(action.payload);
     newTagPanelVisuals[action.payload] = [
-      'Error Indicator'
+      'Number of Controllers', 'Errors and Warnings', 'Error Indicator'
     ];
     newTagPanelProps[action.payload] = {
       tagName: action.payload,

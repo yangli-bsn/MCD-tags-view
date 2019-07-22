@@ -31,12 +31,15 @@ class ControllerMostErrors extends Component {
         <div className='controller-most-errors-list'>
           {
             controllersList.map((controller, index) => {
-              return (
-                <div key={index} 
-                  className='controller-most-errors-link'>
-                  {controller.name}
-                </div>
-              );
+              if (controller) {
+                return (
+                  <div key={index} 
+                    className='controller-most-errors-link'>
+                    {controller.name}
+                  </div>
+                );
+              }
+              return <div key={index} />;
             })
           }
         </div>

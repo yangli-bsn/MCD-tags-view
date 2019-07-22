@@ -11,7 +11,7 @@ import './App.css';
 
 class App extends Component {
   componentDidMount() {
-    const returnData = getDashboard().then((data) => {
+    getDashboard().then((data) => {
       store.dispatch(initializeData(data));
     });
   }
